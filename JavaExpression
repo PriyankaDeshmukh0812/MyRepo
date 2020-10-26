@@ -1,0 +1,19 @@
+class B{
+int c;
+int a;
+}
+class A{
+B b=new B();
+}
+class C{
+B b=new B();
+}
+public class Simple{
+public static void main(String[] args){
+A a=new A();
+C c=new C();
+a.b.c=c.b.a;
+System.out.println("Compiled Successfully");
+}}
+
+
