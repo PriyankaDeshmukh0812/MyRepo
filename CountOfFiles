@@ -1,0 +1,36 @@
+import java.io.*;
+public class Main
+{
+	public static int check(File f){
+	
+	if(f.listFiles()==null)
+	return 0;
+	return f.listFiles().length;
+	}
+	public static int count(File f){
+	int c=0;
+	File file;
+		switch("Jan")
+	{
+		case "Jan":c+=check(new File(f+"/Jan"));
+		case "Feb":c+=check(new File(f+"/Feb"));
+		case "Mar":c+=check(new File(f+"/Mar"));
+		case "Apr":c+=check(new File(f+"/Apr"));
+		case "May":c+=check(new File(f+"/May"));
+		case "Jun":c+=check(new File(f+"/Jun"));
+		case "Jul":c+=check(new File(f+"/Jul"));
+		case "Aug":c+=check(new File(f+"/Aug"));
+		case "Sep":c+=check(new File(f+"/Sep"));
+		case "Oct":c+=check(new File(f+"/Oct"));
+		case "Nov":c+=check(new File(f+"/Nov"));
+		case "Dec":c+=check(new File(f+"/Dec"));
+		default: return c;
+	}	
+	}
+	public static void main(String[] args) {
+		String path="D:/months";
+	     	File f = new File(path);
+	     	
+	     	System.out.println(count(f));
+	}
+}
